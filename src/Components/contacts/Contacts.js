@@ -7,7 +7,6 @@ class Contacts extends Component {
   state = {
     name: "",
     number: "",
-    id: "",
   };
 
   onChange = ({ target }) => {

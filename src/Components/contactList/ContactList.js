@@ -8,10 +8,11 @@ const ContactList = ({ contactsToRender, onDelete }) => {
       <ul>
         {contactsToRender.map((props) => {
           const { name, number, id } = props;
+          const funcDel = () => onDelete(id);
           return (
             <li className="contactItem" key={id} data-id={id}>
               {`${name}: ${number}`}
-              <button type="button" onClick={onDelete}>
+              <button type="button" onClick={funcDel}>
                 Delete
               </button>
             </li>

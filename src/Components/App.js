@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ContactList from "./contactList/ContactList";
 import Filter from "./filter/Filter";
 import Contacts from "./contacts/Contacts";
-import Check from "./check/Check";
+import Check from "../check/Check";
 import { AppStyle } from "./AppStules";
 
 class App extends Component {
@@ -36,8 +36,8 @@ class App extends Component {
     );
   };
 
-  Delete = (e) => {
-    const idToDelete = e.target.closest("li").dataset.id;
+  Delete = (id) => {
+    const idToDelete = id;
     const contactsAfterDel = this.state.contacts.filter(
       (contact) => idToDelete !== contact.id
     );
